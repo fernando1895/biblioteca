@@ -9,10 +9,10 @@
   background: url("../img/contrasenha.svg") no-repeat 16px center, url("../img/ic_required.svg") no-repeat top right;
 }
 .cd-form [required].m-name {
-  background: url("../img/nombre.svg") no-repeat 16px center url("../img/ic_required.svg") no-repeat top right;
+  background: url("../img/nombre.svg") no-repeat 16px center, url("../img/ic_required.svg") no-repeat top right;
 }
 .cd-form [required].m-documento {
-  background: url("../img/documento_id.svg") no-repeat 16px center url("../img/ic_required.svg") no-repeat top right;
+  background: url("../img/ci.svg") no-repeat 16px center, url("../img/ic_required.svg") no-repeat top right;
 }
 .cd-form [required].m-direccion {
   background: url("../img/direccion.svg") no-repeat 16px center, url("../img/ic_required.svg") no-repeat top right;

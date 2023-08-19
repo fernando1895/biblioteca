@@ -29,7 +29,7 @@
 					<input class="m-name" type="text" name="m_name" placeholder="Nombre Completo" required />
 				</div>
 				<div class="icon">
-					<input class="m-documento" type="text" name="m_documento" placeholder="Numero de Documento de Identidad" required />
+					<input class="m-documento" type="text" name="m_documento" placeholder="C.I." required />
 				</div>
 				<div class="icon">
 					<input class="m-direccion" type="text" name="m-direccion" placeholder="Direccion" required />
