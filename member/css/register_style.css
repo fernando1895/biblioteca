@@ -24,10 +24,10 @@
   background: url("../img/ic_dir.svg") no-repeat 16px center, url("../img/ic_required.svg") no-repeat top right;
 }
 .cd-form [required].m-email {
-  background: url("../img/ic_member_email.svg") no-repeat 16px center, url("../img/ic_required.svg") no-repeat top right;
+  background: url("../img/_member_email.svg") no-repeat 16px center, url("../img/ic_required.svg") no-repeat top right;
 }
 .cd-form [required].m-email {
-  background: url("../img/ic_member_email.svg") no-repeat 16px center, url("../img/ic_required.svg") no-repeat top right;
+  background: url("../img/_member_email.svg") no-repeat 16px center, url("../img/ic_required.svg") no-repeat top right;
 }
 .cd-form [required].m-balance {
   background: url("../img/ic_member_balance.svg") no-repeat 16px center, url("../img/ic_required.svg") no-repeat top right;
