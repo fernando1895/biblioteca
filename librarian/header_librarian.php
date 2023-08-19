@@ -8,13 +8,13 @@
 			<div id="cd-logo">
 				<a href="../">
 					<img src="img/ic_logo.svg" alt="Logo" />
-					<p>LIBRERÍA CONFIGUROWEB</p>
+					<p>BIBLIOTECA BIBLIATECA</p>
 				</a>
 			</div>
 			
 			<div class="dropdown">
 				<button class="dropbtn">
-					<p id="librarian-name"><?php echo $_SESSION['username'] ?></p>
+					<p id="librarian-name"><?php echo $_SESSION ['username'] ?></p>
 				</button>
 				<div class="dropdown-content">
 					<a href="../logout.php">Cerrar Sesión</a>

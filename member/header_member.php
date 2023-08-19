@@ -8,7 +8,7 @@
 			<div id="cd-logo">
 				<a href="../">
 					<img src="img/ic_logo.svg" alt="Logo" />
-					<p>LIBRERÍA CONFIGUROWEB</p>
+					<p>BIBLIOTECA BIBLIATECA</p>
 				</a>
 			</div>
 			

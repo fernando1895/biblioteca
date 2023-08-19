@@ -8,7 +8,7 @@
 			<a href="index.php">
 				<div id="cd-logo">
 					<img src="img/ic_logo.svg" alt="Logo" />
-					<p>LIBRERÍA CONFIGUROWEB</p>
+					<p>BIBLIOTECA BIBLIATECA</p>
 				</div>
 			</a>
 		</header>

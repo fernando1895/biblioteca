@@ -12,7 +12,7 @@
 
 <html>
 	<head>
-		<title>Tu Biblioteca ConfiguroWeb</title>
+		<title>BIBLIOTECA BIBLIATECA</title>
 		<link rel="stylesheet" type="text/css" href="css/index_style.css" />
 	</head>
 	<body>
