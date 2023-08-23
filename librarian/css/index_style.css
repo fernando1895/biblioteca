@@ -2,14 +2,8 @@
 .cd-form .icon input{
   padding-left: 54px !important;
 }
-.cd-form .l-user {
-  background: url("../img/id.svg") no-repeat 16px center;
-}
 .cd-form [required].l-user {
   background: url("../img/id.svg") no-repeat 16px center, url("../img/ic_required.svg") no-repeat top right;
-}
-.cd-form .l-pass {
-  background: url("../../member/img/contrasenha.svg") no-repeat 16px center;
 }
 .cd-form [required].l-pass {
   background: url("../../member/img/contrasenha.svg") no-repeat 16px center, url("../img/ic_required.svg") no-repeat top right;

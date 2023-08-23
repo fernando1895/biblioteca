@@ -40,7 +40,11 @@ error_reporting(E_ALL);
 							<th></th>
 							<th>Usuario<hr></th>
 							<th>Nombre<hr></th>
+<<<<<<< HEAD
 							<th>C.I.<hr></th>
+=======
+							<th>Numero C.I.<hr></th>
+>>>>>>> 96d8226 (Correccion en la carga de datos de register y pending_registrations)
 							<th>Direccion<hr></th>
 							<th>Telefono<hr></th>
 							<th>Correo<hr></th>
