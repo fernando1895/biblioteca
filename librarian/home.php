@@ -17,6 +17,12 @@
 			<a href="pending_book_requests.php">
 				<input type="button" value="Solicitudes de Libros Pendientes" />
 			</a><br />
+			<a href="inventario_libro.php">
+				<input type="button" value="Inventario de Libros" />
+			</a><br />
+			<a href="buscador.php">
+				<input type="button" value="Busqueda de Libros" />
+			</a><br />
 			<a href="insert_book.php">
 				<input type="button" value="Agregar un Nuevo Libro" />
 			</a><br />

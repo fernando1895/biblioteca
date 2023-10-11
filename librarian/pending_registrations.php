@@ -11,10 +11,16 @@
 		<link rel="stylesheet" type="text/css" href="../css/global_styles.css">
 		<link rel="stylesheet" type="text/css" href="../css/custom_checkbox_style.css">
 		<link rel="stylesheet" type="text/css" href="css/pending_registrations_style.css">
+
 	</head>
 	<body>
+	<?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+?>
 		<?php
-			$query = $con->prepare("SELECT username, name, email, balance FROM pending_registrations");
+			$query = $con->prepare("SELECT username, name, numero_ci, direccion, nro_telefono, email, balance FROM pending_registrations");
 			$query->execute();
 			$result = $query->get_result();
 			$rows = mysqli_num_rows($result);
@@ -27,11 +33,16 @@
 				echo "<div class='error-message' id='error-message'>
 						<p id='error'></p>
 					</div>";
-				echo "<table width='100%' cellpadding=10 cellspacing=10>
+				echo "<table width='100%' cellpadding=20 cellspacing=20>
+				
+			   
 						<tr>
 							<th></th>
 							<th>Usuario<hr></th>
 							<th>Nombre<hr></th>
+							<th>C.I.<hr></th>
+							<th>Direccion<hr></th>
+							<th>Telefono<hr></th>
 							<th>Correo<hr></th>
 							<th>Balance<hr></th>
 						</tr>";
@@ -46,7 +57,7 @@
 							</label>
 						</td>";
 					$j;
-					for($j=0; $j<3; $j++)
+					for($j=0; $j<6; $j++)
 						echo "<td>".$row[$j]."</td>";
 					echo "<td>$".$row[$j]."</td>";
 					echo "</tr>";
@@ -74,8 +85,8 @@
 						$query->execute();
 						$row = mysqli_fetch_array($query->get_result());
 						
-						$query = $con->prepare("INSERT INTO member(username, password, name, email, balance) VALUES(?, ?, ?, ?, ?);");
-						$query->bind_param("ssssd", $username, $row[1], $row[2], $row[3], $row[4]);
+						$query = $con->prepare("INSERT INTO member(username, password, name, numero_ci, direccion, nro_telefono, email, balance) VALUES (?, ?, ?, ?, ?, ?, ?, ?);");
+						$query->bind_param("sssisisd", $username, $row[1], $row[2], $row[3], $row[4], $row[5], $row[6], $row[7]);
 						if(!$query->execute())
 							die(error_without_field("ERROR: No se pudieron insertar valores"));
 						$members++;
