@@ -41,10 +41,14 @@ error_reporting(E_ALL);
 							<th>Usuario<hr></th>
 							<th>Nombre<hr></th>
 <<<<<<< HEAD
+<<<<<<< HEAD
 							<th>C.I.<hr></th>
 =======
 							<th>Numero C.I.<hr></th>
 >>>>>>> 96d8226 (Correccion en la carga de datos de register y pending_registrations)
+=======
+							<th>C.I.<hr></th>
+>>>>>>> 740fdbd (resolucion de inventario)
 							<th>Direccion<hr></th>
 							<th>Telefono<hr></th>
 							<th>Correo<hr></th>

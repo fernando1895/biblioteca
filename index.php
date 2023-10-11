@@ -12,7 +12,7 @@
 
 <html>
 	<head>
-		<title>BIBLIOTECA BIBLIATECA</title>
+		<title>SGB</title>
 		<link rel="stylesheet" type="text/css" href="css/index_style.css" />
 	</head>
 	<body>

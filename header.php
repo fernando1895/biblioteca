@@ -8,7 +8,7 @@
 			<a href="../index.php">
 				<div id="cd-logo">
 					<img src="img/ic_logo.svg" alt="Logo" />
-					<p>BIBLIOTECA BIBLIATECA</p>
+					<p>SGB</p>
 				</div>
 			</a>
 		</header>
