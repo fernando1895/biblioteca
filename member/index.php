@@ -46,7 +46,7 @@
 			$result = $query->get_result();
 			
 			if(mysqli_num_rows($result) != 1)
-				echo error_without_field("Invalid username/password combination");
+				echo error_without_field("La combinacion usuario/contraseña incorrecta");
 			else 
 			{
 				$resultRow = mysqli_fetch_array($result);

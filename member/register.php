@@ -29,13 +29,13 @@
 					<input class="m-name" type="text" name="m_name" placeholder="Nombre Completo" required />
 				</div>
 				<div class="icon">
-					<input class="m-documento" type="text" name="m_documento" placeholder="C.I." required />
+					<input class="m-documento" type="number" name="m_documento" placeholder="C.I." required />
 				</div>
 				<div class="icon">
-					<input class="m-direccion" type="text" name="m-direccion" placeholder="Direccion" required />
+					<input class="m-direccion" type="text" name="m_direccion" placeholder="Direccion" required />
 				</div>
 				<div class="icon">
-					<input class="m-telefono" type="text" name="m-telefono" placeholder="Telefono" required />
+					<input class="m-telefono" type="number" name="m_telefono" placeholder="Telefono" required />
 				</div>
 				<div class="icon">
 					<input class="m-email" type="email" name="m_email" id="m_email" placeholder="Correo" required />
@@ -47,7 +47,11 @@
 				<input type="submit" name="m_register" value="Registrarse" />
 		</form>
 	</body>
-	
+	<?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+?>
 	<?php
 		if(isset($_POST['m_register']))
 		{
@@ -69,16 +73,17 @@
 						echo error_with_field("Una cuenta ya fue registrada con este correo", "m_email");
 					else
 					{
-						$query = $con->prepare("INSERT INTO pending_registrations(username, password, name, email, balance) VALUES(?, ?, ?, ?, ?);");
-						$query->bind_param("ssssd", $_POST['m_user'], sha1($_POST['m_pass']), $_POST['m_name'], $_POST['m_email'], $_POST['m_balance']);
+						$query = $con->prepare("INSERT INTO pending_registrations(username, password, name, numero_ci, direccion, nro_telefono, email, balance) VALUES (?, ?, ?, ?, ?, ?, ?, ?);");
+						$query->bind_param("sssssssd", $_POST['m_user'], sha1($_POST['m_pass']), $_POST['m_name'], $_POST['m_documento'], $_POST['m_direccion'], $_POST['m_telefono'], $_POST['m_email'], $_POST['m_balance']);
 						if($query->execute())
 							echo success("Sus datos seran validados y una vez realizado se lo notificara por correo");
 						else
-							echo error_without_field("Couldn\'t record details. Please try again later");
+							echo error_without_field("No se puedieron obtener los registros. Por favor intente de nuevo");
 					}
 				}
 			}
 		}
+		
 	?>
 	
 </html>
