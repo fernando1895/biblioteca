@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" href="css/pending_book_requests_style.css">
 </head>
 <body>
-    <h2>Buscador de Libros</h2>
+    <h1 "align='center'>Buscador de Datos</h1>
     <form action="buscador.php" method="GET">
         <input type="text" name="termino_busqueda" placeholder="isbn | titulo | author | categoria">
         <input type="submit" value="Buscar">
@@ -37,10 +37,10 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 
     if ($result->num_rows > 0) {
         // Conexión a la base de datos (código de conexión aquí)
-echo "<h1 align='center'>Resultado de la búsqueda</h1>";
+echo "<h2 align='center'>Resultado de la búsqueda</h2>";
 echo "<table width='100%' cellpadding=10 cellspacing=10>
 						<tr>
-							
+							<th></th>
 							<th>ISBN<hr></th>
                             <th>Titulo<hr></th>
 							<th>Autor<hr></th>
@@ -48,11 +48,7 @@ echo "<table width='100%' cellpadding=10 cellspacing=10>
                             
 						</tr>";
         while($row = $result->fetch_assoc()) {
-            echo "<tr>";
-            echo "<td align='center'>". $row["isbn"] . "</td>";
-            echo "<td align='center'>". $row["title"] . "</td>";
-            echo "<td align='center'>". $row["author"] . "</td>";
-            echo "<td align='center'>". $row["category"] . "</td>";
+            echo "ISBN: " . $row["isbn"] . ", Titulo: " . $row["title"] . " , Autor " . $row["author"] . " , Categoria: " . $row["category"] . "<br>";
             
         
         }

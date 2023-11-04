@@ -4,7 +4,13 @@
 	require "verify_librarian.php";
 	require "header_librarian.php";
 ?>
-
+<?php
+try {
+    throw new Exception("Some error message");
+} catch(Exception $e) {
+    echo "The exception was created on line: " . $e->getLine();
+}
+?>
 <html>
 	<head>
 		<title>Agregar Libro</title>
@@ -51,6 +57,9 @@
 				<div class="icon">
 					<input class="b-copies" type="number" name="b_copies" placeholder="Número de Copias" required />
 				</div>
+				<div class="icon">
+					<input class="b-prestamo" type="number" name="b_prestamo" placeholder="Prestamo 0=si, 1=No" required />
+				</div>
 				
 				<br />
 				<input class="b-isbn" type="submit" name="b_add" value="Agregar" />
@@ -68,8 +77,8 @@
 				echo error_with_field("Ya existe un libro con ese ISBN", "b_isbn");
 			else
 			{
-				$query = $con->prepare("INSERT INTO book VALUES(?, ?, ?, ?, ?, ?);");
-				$query->bind_param("ssssdd", $_POST['b_isbn'], $_POST['b_title'], $_POST['b_author'], $_POST['b_category'], $_POST['b_price'], $_POST['b_copies']);
+				$query = $con->prepare("INSERT INTO book VALUES(?, ?, ?, ?, ?, ?, ?);");
+				$query->bind_param("ssssddd", $_POST['b_isbn'], $_POST['b_title'], $_POST['b_author'], $_POST['b_category'], $_POST['b_price'], $_POST['b_copies'], $_POST['b_prestamo']);
 				
 				if(!$query->execute())
 					die(error_without_field("ERROR: Couldn't add book"));
@@ -78,3 +87,4 @@
 		}
 	?>
 </html>
+
